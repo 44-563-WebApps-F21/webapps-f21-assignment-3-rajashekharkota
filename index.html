@@ -64,6 +64,36 @@
     <td>$2</td>
   </tr>
 </table>
+<hr>
+<h3>Code Display</h3>
+<blockquote cite="https://en.wikipedia.org/wiki/Convex_hull">
+    In geometry, the convex hull or convex envelope or 
+    convex closure of a shape is the smallest convex set
+     that contains it. The convex hull may be defined either
+      as the intersection of all convex sets containing a 
+      given subset of a Euclidean space, or equivalently as
+       the set of all convex combinations of points in the 
+       subset. For a bounded subset of the plane, the convex
+        hull may be visualized as the shape enclosed by a 
+        rubber band stretched around the subset.
+</blockquote>
+<a href="https://en.wikipedia.org/wiki/Convex_hull">Link for description</a>
+<br>
 
+<pre>
+    typedef int ftype;
+typedef complex<ftype> point;
+#define x real
+#define y imag
+
+ftype dot(point a, point b) {
+    return (conj(a) * b).x();
+}
+
+ftype cross(point a, point b) {
+    return (conj(a) * b).y();
+}
+</pre>
+<a href="https://cp-algorithms.com/geometry/convex_hull_trick.html">link for source code</a>
     </body>
 </html>
